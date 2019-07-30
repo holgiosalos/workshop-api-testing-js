@@ -221,13 +221,14 @@ En ésta sección se realizarán pruebas al API de Github, en donde se consultar
 
     describe('Github Api Test', () => {
       describe('Authentication', () => {
-        it('Via OAuth2 Tokens by Header', () =>
-          agent.get(`${urlBase}/repos/${githubUserName}/${repository}`)
-            .auth('token', process.env.ACCESS_TOKEN)
-            .then((response) => {
-              expect(response.status).to.equal(statusCode.OK);
-              expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
-            }));
+        it('Via OAuth2 Tokens by Header', () => agent
+          .get(`${urlBase}/repos/${githubUserName}/${repository}`)
+          .auth('token', process.env.ACCESS_TOKEN)
+          .set('User-Agent', 'agent')
+          .then((response) => {
+            expect(response.status).to.equal(statusCode.OK);
+            expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
+          }));
       });
     });
     ```
@@ -244,13 +245,14 @@ En ésta sección se realizarán pruebas al API de Github, en donde se consultar
 1. Adicionar la prueba para autenticación por parámetros.
 
     ```js
-    it('Via OAuth2 Tokens by parameter', () =>
-      agent.get(`${urlBase}/repos/${githubUserName}/${repository}`)
-        .query(`access_token=${process.env.ACCESS_TOKEN}`)
-        .then((response) => {
-          expect(response.status).to.equal(statusCode.OK);
-          expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
-        }));
+    it('Via OAuth2 Tokens by parameter', () => agent
+      .get(`${urlBase}/repos/${githubUserName}/${repository}`)
+      .set('User-Agent', 'agent')
+      .query(`access_token=${process.env.ACCESS_TOKEN}`)
+      .then((response) => {
+        expect(response.status).to.equal(statusCode.OK);
+        expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
+      }));
     ```
 
 1. Encriptar la variable **ACCESS_TOKEN** en travis. Debe instalar localmente travis-cli
