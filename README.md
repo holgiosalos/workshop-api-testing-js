@@ -12,10 +12,10 @@ En esta primera parte se creará un proyecto node desde 0 y se configurará la p
 1. Seguir las instrucciones para realizar el primer commit
 1. En la configuración del repositorio de GitHub en la opción Branches proteja la rama `Master` indicando que los PR requieran revisión antes de mergear y que requiera la comprobación del estado antes de hacer merge
 1. Dentro del menu colaboradores agregar a:
-   * [aperdomobo](https://github.com/aperdomob)
-   * [germandavid85](https://github.com/germandavid85)
-   * [jhenaoz](https://github.com/jhenaoz)
-   * [luigisamurai](https://github.com/luigisamurai)
+   * [holgiosalos](https://github.com/holgiosalos)
+   * [valeryibarra](https://github.com/valeryibarra)
+   * [renardete](https://github.com/renardete)
+   * [leonleo997](https://github.com/leonleo997)
 1. [Instalar NodeJS](https://nodejs.org/es/download/package-manager/) en su equipo si no lo tiene instalado
 1. Ejecutar en una consola `npm init` dentro de la ruta donde se encuentra el repositorio y colocar la siguiente información:
 
