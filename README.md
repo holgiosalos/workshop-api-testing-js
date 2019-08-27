@@ -254,12 +254,17 @@ En ésta sección se realizarán pruebas al API de Github, en donde se consultar
         }));
     ```
 
-1. Encriptar la variable **ACCESS_TOKEN** en travis. Debe instalar localmente travis-cli
-
+1. Encriptar la variable **ACCESS_TOKEN** en travis. Debe [instalar localmente travis-cli](https://github.com/travis-ci/travis.rb#installation)
+   - Si utilizaste **travis-ci.org**:
     ```bash
     travis encrypt ACCESS_TOKEN="your-access-token" --add --org
     ```
-
+   - Si utilizaste **travis-ci.com**
+   ```bash
+    travis login --pro
+    travis encrypt ACCESS_TOKEN="your-access-token" --add --com
+    ```
+   
 1. Subir los cambios a GitHub, crear un PR y solicitar revisión
 
 ### Consumiendo Métodos GET
