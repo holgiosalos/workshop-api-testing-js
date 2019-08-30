@@ -242,7 +242,7 @@ En ésta sección se realizarán pruebas al API de Github, en donde se consultar
     ```
     -  Si es en windows:
     ```bash
-    setx ACCESS_TOKEN=token_de_acceso
+    setx ACCESS_TOKEN token_de_acceso
     ```
 
 1. Ejecutar las pruebas.
