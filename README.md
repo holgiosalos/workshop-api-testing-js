@@ -236,9 +236,13 @@ En ésta sección se realizarán pruebas al API de Github, en donde se consultar
 1. Reemplazar el valor de githubUserName por su usuario de Github.
 1. Reemplazar el valor de repository por el nombre del repositorio
 1. Establecer la variable de entorno **ACCESS_TOKEN** con el valor del token de acceso.
-
+    - Si es linux:
     ```bash
     export ACCESS_TOKEN=token_de_acceso
+    ```
+    -  Si es en windows:
+    ```bash
+    setx ACCESS_TOKEN=token_de_acceso
     ```
 
 1. Ejecutar las pruebas.
